@@ -1,4 +1,4 @@
-package com.springdrones.ecommerce;
+package com.springDrone.ecommerce;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
