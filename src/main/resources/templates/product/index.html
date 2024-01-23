@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" th:href="@{/css/home.css}">  
-    <title>Products</title>
+    <link rel="stylesheet" th:href="@{/css/product/index.css}">  
+    <title>Ecommerce Products</title>
 </head>
 <body>
 
 <div class="container">
-    <h1>Welcome to my website!</h1>
+    <h1>Products!</h1>
     <img src="/images/FotoProfesionalBanco.png" alt="Author of website">
 
-    <a th:href="@{/products}"> ir a productos </a>
-    <a th:href="@{/taming}"> ir al desarrollo con el libro de Taming Thymeleaf </a>
+    <div th:text="|Sum of 2 + 2 = ${ 2 + 2 }|"></div>
 </div>
 
 </body>
 </html>
+
+

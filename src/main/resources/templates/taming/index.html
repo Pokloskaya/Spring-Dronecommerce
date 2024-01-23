@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/taming/index.css}">
+    <title>Taming Thymeleaf</title>
+</head>
+<body>
+
+    <header class="card">
+        <h1 th:text="${pageTitle}">Welcome to my website!</h1>
+    </header>
+
+    <section class="card">
+        <div class="scientists">
+            <h2>Famous Scientists</h2>
+            <ul>
+                <li th:each="scientist : ${scientists}">
+                    <span th:text="${scientist}"></span>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="card">
+        <div class="drones">
+            <h2>Featured Drone</h2>
+            <p th:text="${drones[0]}"></p>
+        </div>
+    </section>
+
+    <section class="card">
+        <div class="example">
+            <h2>Combining String Literal with a Variable</h2>
+            <p th:with="exampleVariable='example'" th:text="'Literal + Variable: ' + ${exampleVariable}"></p>
+        </div>
+    </section>
+
+    <section class="card">
+        <div class="condition">
+            <h2>Conditional Display</h2>
+            <div th:if="${condition > 10}">The condition is true!</div>
+        </div>
+    </section>
+
+    <section class="card">
+        <div class="external-link">
+            <h2>External Link</h2>
+            <a th:href="@{https://www.google.com/search?q=thymeleaf}" target="_blank">Learn more about Thymeleaf</a>
+        </div>
+    </section>
+
+    <section class="card">
+        <div class="home-link">
+            <h2>Home Page Link</h2>
+            <a th:href="@{/}">Go to the home page</a>
+        </div>
+    </section>
+
+</body>
+</html>
