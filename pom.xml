@@ -21,7 +21,20 @@
         <frontend-maven-plugin.nodeVersion>v18.15.0</frontend-maven-plugin.nodeVersion>
         <frontend-maven-plugin.npmVersion>9.5.0</frontend-maven-plugin.npmVersion>
     </properties>
+    
     <dependencies>
+
+        <!-- this is like the JPA -->
+        <dependency>
+            <groupId>jakarta.persistence</groupId>
+            <artifactId>jakarta.persistence-api</artifactId>
+            <version>3.0.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>nz.net.ultraq.thymeleaf</groupId>
+            <artifactId>thymeleaf-layout-dialect</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
