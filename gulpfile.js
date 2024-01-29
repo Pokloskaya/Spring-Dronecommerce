@@ -47,16 +47,25 @@ function reload(done) {
 
 // Watch task
 
-gulp.task('watch', () => {
-  browserSync.init({
-    server: {
-      baseDir: 'target/classes/'
-    }
-  });
+// gulp.task('watch', () => {
+//   browserSync.init({
+//     server: {
+//       baseDir: 'target/classes/'
+//     }
+//   });
 
-  // Watch for changes and trigger respective tasks
+//   // Watch for changes and trigger respective tasks
+
+//   gulp.watch(['src/main/resources/**/*.html'], gulp.series('copy-html+css-and-reload'));
+//   gulp.watch(['src/main/resources/**/*.css'], gulp.series('copy-css-and-reload'));
+//   gulp.watch(['src/main/resources/**/*.js'], gulp.series('copy-js-and-reload'));
+// });
+
+gulp.task('watch', () => {
+  browserSync.init({proxy: 'localhost:8080'});
 
   gulp.watch(['src/main/resources/**/*.html'], gulp.series('copy-html+css-and-reload'));
+  gulp.watch(['src/main/resources/**/*.svg'], gulp.series('copy-svg+css-and-reload'));
   gulp.watch(['src/main/resources/**/*.css'], gulp.series('copy-css-and-reload'));
   gulp.watch(['src/main/resources/**/*.js'], gulp.series('copy-js-and-reload'));
 });

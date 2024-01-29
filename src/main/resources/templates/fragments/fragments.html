@@ -9,13 +9,10 @@
         <link rel="stylesheet" th:href="@{/css/application.css}">
     </head>
 
-
-
     <body> 
-        <a th:fragment="menu-item(title, link, svgContents)" 
+        <a th:fragment="menu-item(title, link)" 
             th:href="${link}"
             class="bg-gray-100 text-gray-900 group flex items-center px-2 py-2text-sm font-medium rounded-md">
-            <svg th:replace="${svgContents}"></svg>
             [[${title}]]
         </a>
     </body>

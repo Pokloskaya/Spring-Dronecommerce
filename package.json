@@ -4,8 +4,12 @@
     "@babel/cli": "^7.21.0",
     "@tailwindcss/forms": "^0.5.7",
     "autoprefixer": "^10.4.14",
-    "browser-sync": "^2.28.3",
+    "browser-sync": "^2.29.3",
     "cssnano": "^5.1.15",
+    "gulp-babel": "^8.0.0",
+    "gulp-postcss": "^9.1.0",
+    "gulp-terser": "^2.1.0",
+    "gulp-uglifycss": "^1.1.0",
     "mkdirp": "^2.1.5",
     "npm-run-all": "^4.1.5",
     "onchange": "^7.1.0",
@@ -32,5 +36,8 @@
     "watch:js": "onchange \"src/main/resources/static/js/**/*.js\" -- npm run build:js",
     "watch:svg": "onchange \"src/main/resources/static/svg/**/*.svg\" -- npm run build:svg",
     "watch:serve": "browser-sync start --no-inject-changes --proxy localhost:8080 --files \"target/classes/templates\" \"target/classes/static\""
+  },
+  "dependencies": {
+    "gulp": "^4.0.2"
   }
 }

@@ -8,11 +8,12 @@
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
         <link rel="stylesheet" th:href="@{/css/application.css}">
     </head>
+
     <body> 
         <a th:fragment="menu-item(title, link)" 
-            th:text="${title}"
             th:href="${link}"
-            class="flex items-center px-2 py-2 text-base leading-6 font-medium text-gray-900">
+            class="bg-gray-100 text-gray-900 group flex items-center px-2 py-2text-sm font-medium rounded-md">
+            [[${title}]]
         </a>
     </body>
 </html>
