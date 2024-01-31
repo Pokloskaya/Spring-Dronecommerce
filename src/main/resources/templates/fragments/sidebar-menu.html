@@ -71,9 +71,10 @@
             </div>
             <div class="mt-5 h-0 flex-1 overflow-y-auto">
                 <!-- tag::mobile-nav[] -->
+                <!-- THIS DOES NOT SUPPORT ANOTHER LANGUAGES!!! ONLY ENGLISH. NEEDS TO BE FIXED.  -->
                 <nav class="space-y-1 px-2">
                     <a th:replace="~{fragments/sidebar-buttons :: mobile-button(link='#', title='Dashboard', menuItem='dashboard', icon='dashboard')}"></a>
-                    <a th:replace="~{fragments/sidebar-buttons :: mobile-button(link='#', title='Team', menuItem='team', icon='team')}"></a>
+                    <a th:replace="~{fragments/sidebar-buttons :: mobile-button(link='/teams', title='Teams', menuItem='team', icon='team')}"></a>
                     <a th:replace="~{fragments/sidebar-buttons :: mobile-button(link='#', title='Projects', menuItem='projects', icon='projects')}"></a>
                     <a th:replace="~{fragments/sidebar-buttons :: mobile-button(link='#', title='Calendar', menuItem='calendar', icon='calendar')}"></a>
                     <a th:replace="~{fragments/sidebar-buttons :: mobile-button(link='#', title='Documents', menuItem='documents', icon='documents')}"></a>
@@ -101,15 +102,17 @@
         <div class="mt-5 flex flex-grow flex-col">
             <!-- tag::desktop-nav[] -->
             <nav class="flex-1 space-y-1 px-2 pb-4">
-                <a th:replace="~{fragments/sidebar-buttons :: desktop-button(link='#', title='Dashboard', menuItem='dashboard', icon='dashboard')}"></a>
-                <a th:replace="~{fragments/sidebar-buttons :: desktop-button(link='#', title='Team', menuItem='team', icon='team')}"></a>
-                <a th:replace="~{fragments/sidebar-buttons :: desktop-button(link='#', title='Projects', menuItem='projects', icon='projects')}"></a>
-                <a th:replace="~{fragments/sidebar-buttons :: desktop-button(link='#', title='Calendar', menuItem='calendar', icon='calendar')}"></a>
-                <a th:replace="~{fragments/sidebar-buttons :: desktop-button(link='#', title='Documents', menuItem='documents', icon='documents')}"></a>
-                <a th:replace="~{fragments/sidebar-buttons :: desktop-button(link='#', title='Reports', menuItem='reports', icon='reports')}"></a>
+                <a th:replace="~{fragments/sidebar-buttons :: desktop-button(link='#', title=#{menu.dashboard}, menuItem='dashboard', icon='dashboard')}"></a>
+                <a th:replace="~{fragments/sidebar-buttons :: desktop-button(link='/teams', title=#{menu.teams}, menuItem='team', icon='team')}"></a>
+                <a th:replace="~{fragments/sidebar-buttons :: desktop-button(link='#', title=#{menu.projects}, menuItem='projects', icon='projects')}"></a>
+                <a th:replace="~{fragments/sidebar-buttons :: desktop-button(link='#', title=#{menu.calendar}, menuItem='calendar', icon='calendar')}"></a>
+                <a th:replace="~{fragments/sidebar-buttons :: desktop-button(link='#', title=#{menu.documents}, menuItem='documents', icon='documents')}"></a>
+                <a th:replace="~{fragments/sidebar-buttons :: desktop-button(link='#', title=#{menu.reports}, menuItem='reports', icon='reports')}"></a>
             </nav>
             <!-- end::desktop-nav[] -->
         </div>
     </div>
 </div>
 </html>
+
+

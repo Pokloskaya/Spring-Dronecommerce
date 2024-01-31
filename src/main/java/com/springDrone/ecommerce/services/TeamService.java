@@ -13,9 +13,9 @@ public class TeamService {
         // Your logic to fetch teams
         // For demonstration purposes, let's create a sample set of teams
         SortedSet<Team> teams = new TreeSet<>();
-        teams.add(new Team("Team A"));
-        teams.add(new Team("Team B"));
-        teams.add(new Team("Team C"));
+        teams.add(new Team("Team Real Madrid"));
+        teams.add(new Team("Team Barca"));
+        teams.add(new Team("Team Valencia"));
         return teams;
     }
 }
