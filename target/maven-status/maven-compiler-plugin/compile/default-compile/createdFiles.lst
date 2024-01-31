@@ -1,9 +1,8 @@
 com\springDrone\ecommerce\services\TeamService.class
 com\springDrone\ecommerce\infraestructure\web\WebMvcConfiguration.class
 com\springDrone\ecommerce\SpringDronecommerceApplication.class
+com\springDrone\ecommerce\product\TamingController.class
 com\springDrone\ecommerce\system\WelcomeController.class
-com\springDrone\ecommerce\taming\TamingController.class
 com\springDrone\ecommerce\team\TeamController.class
 com\springDrone\ecommerce\SpringDronecommerceApplicationConfiguration.class
 com\springDrone\ecommerce\model\Team.class
-com\springDrone\ecommerce\product\ProductController.class
